@@ -1,4 +1,7 @@
 <script lang="ts">
+	import ExpandButton from '$lib/expandButton/expandButton.svelte';
+	import { onMount } from 'svelte';
+
 	export let bcgColor = 'red';
 	export let color = 'black';
 	export let header = 'Header';
@@ -6,11 +9,15 @@
 	export let links: Array<{ title: string; url: string }> = [];
 
 	let windowWidth: number;
+	let expandLinks = false;
 
 	const onResizeHandler = (e) => {
 		windowWidth = e.currentTarget.innerWidth;
-		console.log(e.currentTarget.innerWidth);
 	};
+
+	onMount(() => {
+		windowWidth = window.innerWidth;
+	});
 </script>
 
 <svelte:window on:resize={onResizeHandler} />
@@ -25,11 +32,25 @@
 					<a style="border: 1px solid {color}" class="link" href={link.url}>{link.title}</a>
 				{/each}
 			</div>
+		{:else}
+			<div class="centerRight">
+				<ExpandButton
+					isOpen={expandLinks}
+					onClick={() => {
+						expandLinks = !expandLinks;
+					}}
+				/>
+			</div>
 		{/if}
 	{/if}
 </div>
 
 <style>
+  .centerRight{
+    position: absolute;
+    right: 25px;
+    top:25%;
+  }
 	.bannerWrapper {
 		margin: 10px 0;
 	}
