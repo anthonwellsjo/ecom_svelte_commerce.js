@@ -4,7 +4,6 @@
 
 <script lang="ts">
 	import Banner from '$lib/banner/Banner.svelte';
-	import Counter from '$lib/Counter.svelte';
 </script>
 
 <svelte:head>
@@ -18,6 +17,11 @@
 		color="white"
 		header="Added styles! Up to 50% off"
 		bodyText="Valid on selected items in-store and at hm.com while stocks last. Stock may vary."
+		links={[
+      { title: 'Women', url: 'www.gp.se' },
+      { title: 'Men', url: 'www.gp.se' },
+      { title: 'Divided', url: 'www.gp.se' },
+      ]}
 	/>
 </section>
 
@@ -32,6 +36,4 @@
 		align-items: center;
 		flex: 1;
 	}
-
-	
 </style>
