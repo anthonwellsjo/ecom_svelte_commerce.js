@@ -28,6 +28,7 @@
 <style>
 	#delivery {
 		font-size: 0.7em;
+    text-align: center;
 	}
 	section {
 		padding-top: 30px;

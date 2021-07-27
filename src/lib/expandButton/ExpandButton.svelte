@@ -1,13 +1,13 @@
 <script lang="ts">
 	export let isOpen: boolean;
-	export let onClick: () => void;
+	// export let onClick: () => void;
 	export let color = 'white';
 </script>
 
-<button on:click={onClick}>
+<button>
 	<div id="wrapper">
 		<div id="horizontal" style="background-color: {color}" />
-		{#if isOpen}
+		{#if !isOpen}
 			<div style="background-color: {color}" id="vertical" />
 		{/if}
 	</div>
@@ -19,7 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: text;
   }
 	button {
 		background: none;
@@ -27,7 +26,6 @@
 		border: none;
 		padding: 0;
 		font: inherit;
-		cursor: pointer;
 		outline: inherit;
     width:20px;
     height :20px;
