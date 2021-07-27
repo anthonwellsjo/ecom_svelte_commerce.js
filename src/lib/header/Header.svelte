@@ -12,9 +12,9 @@
 
 	<nav>
 		<ul>
-			<li class:active={$page.path === '/women'}><a sveltekit:prefetch href="/women">Women</a></li>
-			<li class:active={$page.path === '/men'}><a sveltekit:prefetch href="/men">Men</a></li>
-			<li class:active={$page.path === '/divided'}><a sveltekit:prefetch href="/divided">Divided</a>
+			<li class:active={$page.path === '/women'}><a sveltekit:prefetch href="/#">Women</a></li>
+			<li class:active={$page.path === '/men'}><a sveltekit:prefetch href="/#">Men</a></li>
+			<li class:active={$page.path === '/divided'}><a sveltekit:prefetch href="/#">Divided</a>
 			</li>
 			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
 		</ul>
