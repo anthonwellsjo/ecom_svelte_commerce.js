@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ExpandButton from '$lib/expandButton/expandButton.svelte';
+	import ExpandButton from '$lib/components/expandButton/expandButton.svelte';
 	import { onMount } from 'svelte';
 
 	export let bcgColor = 'red';
